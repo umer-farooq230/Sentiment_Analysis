@@ -1,0 +1,20 @@
+data:
+  raw_data_path: "data/raw/google_reviews.csv"
+
+split:
+  test_size: 0.2
+
+features:
+  add_word_count: true
+  add_subjectivity_bins: true
+  include_sentiment_polarity: true
+
+model:
+  type: "xgboost"
+  params:
+    num_class : 3
+    learning_rate: 0.01
+
+training:
+  use_class_weights: true
+  
